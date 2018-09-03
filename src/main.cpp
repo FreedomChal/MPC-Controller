@@ -101,7 +101,7 @@ int main() {
           //* Both are in between [-1, 1].
           //*
 
-          double delay = 0.11; // To deal with latency, change the x and y coordinates and psi as if the car had driven for the latency duration plus an extra computing time extra at a constant velocity. Got the idea for this from https://github.com/gardenermike/model-predictive-controller/blob/master/src/main.cpp .
+          double delay = 0.11; // To deal with latency, change the x and y coordinates and psi as if the car had driven for the latency duration plus an extra computing time at a constant velocity. Got the idea for this from https://github.com/gardenermike/model-predictive-controller/blob/master/src/main.cpp .
 
           px += v * cos(psi) * delay;
           py += v * sin(psi) * delay;
