@@ -122,7 +122,6 @@ int main() {
           Eigen::VectorXd coeffs = polyfit(Eigen::Map<Eigen::VectorXd>(&vehicle_coord_x[0], vehicle_coord_x.size()), Eigen::Map<Eigen::VectorXd>(&vehicle_coord_y[0], vehicle_coord_y.size()), 3);
 
           Eigen::VectorXd state(6);
-          v /= 1.1;
           state << 0, 0, 0, v, polyeval(coeffs, px) - py, psi - atan(coeffs[1]);
 
           vector<double> mpc_results = mpc.Solve(state, coeffs);
@@ -130,7 +129,6 @@ int main() {
           double throttle_value = mpc_results[1];
 
           json msgJson;
-          throttle_value *= 1.1;
           steer_value /= 0.436332;
           // NOTE: Remember to divide by deg2rad(25) before you send the steering value back.
           // Otherwise the values will be in between [-deg2rad(25), deg2rad(25] instead of [-1, 1].
