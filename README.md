@@ -3,7 +3,7 @@ Classwork for the Udacity Self Driving Car Nanodegree
 
 ## Model Predictive Controller Description
 
-A Model Predictive Controller (MPC) is a method of trajectory optimization. Upon receiving current trajectory data, the current location, and a polynomial approximation of the best possible trajectory, the MPC plans the optimal trajectory given the current information. After moving in accordance to the optimal trajectory, the system pauses for a small period of time called a "timestep", and the process is run again. Often the method of optimization is tweaked by penalizing sharp turns and accelerations. Also, in this project, there is a small latency between commands. As a result, part of the model designing is finding a solution to prevent latency from being a problem.
+A Model Predictive Controller (MPC) is a method of trajectory optimization. Upon receiving current trajectory data, the current location, and a polynomial approximation of the best possible trajectory, the MPC plans the optimal trajectory given the current information. After moving in accordance to the optimal trajectory, the system pauses for a small period of time called a "timestep", and the process is run again. Often the method of optimization is tweaked by penalizing sharp turns and accelerations. Also, in this project, there is a small latency between commands. As a result, part of the model design process is finding a solution to prevent latency being a problem.
 
 ## MPC Design
 
